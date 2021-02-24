@@ -17,34 +17,15 @@ You will need:
 
 Checkout the repository or download the sources.
 
-Simply run 
+For install run:
 
-`docker-compose up` 
+`sh install.sh`
+
+For start run:
+
+`sh start.sh` 
 
 and you are done.
-
-If you want rebuild exec 
-
-`docker-compose up --build --force-recreate -V --always-recreate-deps  --remove-orphans`.
-
-Set the permision to 777 in the following directories:
-
-`chmod -R 777 web/admin/runtime`
-
-`chmod -R 777 web/frontend/runtime`
-
-`chmod -R 777 web/frontend/www/assets`
-
-`chmod -R 777 web/admin/www/assets`
-
-Run migrations
-
-`docker-compose exec app_php php console/yiic migrate up`
-
-Start WebSocket Server
-
-`docker-compose exec app_php php console/yiic websocketserver start -d`
-
 
 Nginx will be available on Frontend Panel `localhost:80` and Admin panel `localhost:81`
 
