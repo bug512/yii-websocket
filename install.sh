@@ -4,6 +4,12 @@ if [ ! -f .env ]; then
     cp .env.example .env
 fi
 
+if [ ! -d console/runtime ]; then
+    mkdir console/runtime
+fi
+
+sudo chmod -R 777 console/runtime
+
 if [ ! -d web/admin/runtime ]; then
     mkdir web/admin/runtime
 fi
@@ -34,7 +40,7 @@ npm install --prefix web/frontend/www/
 
 docker-compose up -d
 
-docker-compose exec app_php php console/yiic migrate up
+docker-compose exec app_php php console/yiic migrate up --interactive=0
 
 docker-compose exec app_php php console/yiic websocketserver start -d
 
