@@ -30,10 +30,12 @@ If you want rebuild exec
 Set the permision to 777 in the following directories:
 
 `chmod -R 777 web/admin/runtime`
-`chmod -R 777 web/frontend/runtime`
-`chmod -R 777 web/frontend/www/assets`
-`chmod -R 777 web/admin/www/assets`
 
+`chmod -R 777 web/frontend/runtime`
+
+`chmod -R 777 web/frontend/www/assets`
+
+`chmod -R 777 web/admin/www/assets`
 
 Run migrations
 
