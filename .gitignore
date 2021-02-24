@@ -1,0 +1,6 @@
+/.idea
+/common/vendor
+/web/admin/www/node_modules
+/web/frontend/www/node_modules
+/.env
+.DS_Store

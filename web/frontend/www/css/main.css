@@ -1,0 +1,11 @@
+.error, md-error, .errorMessage {
+    color: red !important;
+}
+
+.comments-wrapper {
+    height: 600px
+}
+
+.comment-card {
+    width: 100%;
+}
