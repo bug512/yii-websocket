@@ -73,14 +73,9 @@ class WebSocketServerCommand extends CConsoleCommand
                     $connection->send($data);
                 }
             });
-            /*// you can subscribe any events you want.
-            Channel\Client::on('some other event like send group', function($data)use($worker){
-                // Your send to group business.
-            });*/
         };
 
         // Emitted when new connection come
-
         $ws_worker->onConnect = function ($connection) {
             echo 'New connection' . PHP_EOL;
             \Yii::log('New connection');
@@ -90,7 +85,7 @@ class WebSocketServerCommand extends CConsoleCommand
         $ws_worker->onMessage = function ($connection, $data) {
             Channel\Client::publish('broadcast', $data);
             // Send hello $data
-            echo $data . ' - it\s ok.';
+            echo $data . ' - it\'s ok.';
         };
 
         // Emitted when connection closed
