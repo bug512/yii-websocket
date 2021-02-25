@@ -1,6 +1,11 @@
 /.idea
 /common/vendor
+/console/runtime
+/web/admin/runtime
+/web/admin/www/assets
 /web/admin/www/node_modules
+/web/frontend/runtime
+/web/frontend/www/assets
 /web/frontend/www/node_modules
 /.env
 .DS_Store
